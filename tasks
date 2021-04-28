@@ -1,0 +1,83 @@
+I. SITEBUILD
+npx create-react-app 
+npm install @material-ui/core - tipography, Grid
+npm install @material-ui/styles -makeStyles
+npm install @material-ui/icons
+npm install fontsource-roboto
+npm install node-sass 
+
+-----
+SASS
+-----
+sass --watch style.scss style.css
+
+
+################################################################
+IV. REACT-os feladathoz
+npm install
+npm install uuid
+
+
+################################################################
+-----
+REACT DEPLOYMENT
+----------
+0. Repo létrehozása, readme file! - klónozás
+
+A project elkészítése, pusolás
+
+1. npm run build (project könyvtárban)
+
+2. .gitignore (build törlése
+
+3. build/index.html kinyitása ctrF /static ---> ./static átnevezés
+
+4. Githubra menni, settings, pages
+   branch/root/share 
+   link átmásolása a főoldalra, de még nincs kész!
+
+5. index file megkereése /frontend/build, ezt hozzáírjuk a linkhez. 
+
+6.	Végső link ghpage//frontend/build
+7.	kinyit ellenőriz
+	viszgafeladatba beír
+
+-----
+DOCKER 
+-----
+hub.docker.com
+
+8. Dockerfile-t a frontenden kívülre másoljuk
+
+9. index.html helye: /frontend/build
+
+10. Dockerfile stage, commit, push github-ra
+
+11. hub.docket.com-on
+	create repo
+	elnevezés ugyanaz mint a github projekt
+	public
+	connected - github név és repó kiválasztása
+	build rules - branch!!
+	create and build
+
+12.főoldalra lépni, rámenni a projekre - recent build (megy-e)
+
+13. link: general----public view ----URL link
+
+14. url link bemásolása a vizsgafeladatba
+
+--KÉSZ, ÜGYES VOLTÁL ANGIE!----
+
+
+
+
+
+Dockerfile így néz ki:
+#létrehozzuk a webservert
+FROM nginx:latest
+
+COPY ./frontend/build usr/share/nginx/html (ha sima html---- ./
+EXPOSE 80
+
+
