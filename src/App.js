@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Client from "./components/Client";
+import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
 const App = () => {
@@ -22,8 +24,13 @@ const App = () => {
         disabled={search.length < 3 ? true : false}
         onClick={() => click()}
       >
+        {" "}
         Search
       </button>
+
+      {data.map((item) => (
+        <Client key={uuidv4()} item={item} />
+      ))}
     </div>
   );
 };

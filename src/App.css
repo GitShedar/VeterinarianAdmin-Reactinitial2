@@ -14,3 +14,13 @@
   margin: 16px;
   padding: 16px;
 }
+
+.petName {
+
+color:brown;
+font-weight: 500;
+}
+
+.button {
+  margin-left: 5px;
+}
